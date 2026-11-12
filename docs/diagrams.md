@@ -219,13 +219,8 @@ flowchart TB
     Out --> Recv
     Hook --> Recv
     Txn -.->|"Outbox row"| Out
-    note right of Out
-        Outbox publishing is also available
-        as an optional in-application task.
-        Retention is CLI-only: --once,
-        --apply required before any
-        deletion or anonymization.
-    end note
+    Note["Outbox publishing is also available<br/>as an optional in-application task.<br/>Retention is CLI-only: --once,<br/>--apply required before any<br/>deletion or anonymization."]
+    Out -.-> Note
 ```
 
 ## 10. Authentication and session lifecycle
